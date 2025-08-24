@@ -1,1 +1,112 @@
-<h1>Hello GitHub!</h1>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>soulkiller_037 — 个人主页</title>
+  <meta name="description" content="soulkiller_037 的个人介绍页 — 一个新人" />
+  <!-- 以下为页面样式：浅蓝色与白色为主色调 -->
+  <style>
+    :root{
+      --bg:#f7fbff;        /* 整体背景：非常浅的蓝 */
+      --card:#ffffff;      /* 卡片背景：白色 */
+      --primary:#0b84ff;   /* 主色：浅蓝偏亮 */
+      --muted:#6b7280;
+      --radius:12px;
+      --max-w:900px;
+      --gap:18px;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0f1724;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--max-w);margin:40px auto;padding:24px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 20px rgba(11,132,255,0.06);padding:28px;display:grid;grid-template-columns:120px 1fr;gap:var(--gap);align-items:center}
+    /* 头像样式 */
+    .avatar{width:120px;height:120px;border-radius:14px;overflow:hidden;flex:0 0 120px;border:4px solid rgba(11,132,255,0.08)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:1.6rem}
+    .subtitle{margin:6px 0;color:var(--muted)}
+    .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--primary);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+    .btn.ghost{background:transparent;color:var(--primary);border:1px solid rgba(11,132,255,0.12)}
+    .links a{color:var(--primary);text-decoration:none;margin-right:12px}
+    /* 详情区 */
+    .details{margin-top:20px;display:grid;grid-template-columns:1fr 220px;gap:18px}
+    .panel{background:linear-gradient(180deg, rgba(11,132,255,0.02), rgba(11,132,255,0.01));padding:16px;border-radius:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:#eef7ff;color:var(--primary);padding:6px 10px;border-radius:999px;font-size:0.9rem}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem}
+    /* 响应式 */
+    @media(max-width:720px){
+      .card{grid-template-columns:1fr;grid-template-rows:auto;gap:12px}
+      .details{grid-template-columns:1fr}
+      .avatar{margin:0 auto}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 头部卡片：头像、姓名与简介 -->
+    <section class="card" role="banner" aria-label="个人简介卡片">
+      <div class="avatar" aria-hidden="false">
+        <!-- 使用仓库根目录的 photo.jpg 作为头像 -->
+        <img src="photo.jpg" alt="soulkiller_037 的头像">
+      </div>
+      <div>
+        <h1>soulkiller_037</h1>
+        <div class="subtitle">一个新人</div>
+        <div class="actions">
+          <!-- 社交链接 -->
+          <a class="btn" href="https://github.com/soulkiller037" target="_blank" rel="noopener">GitHub</a>
+          <!-- 占位：无简历下载 -->
+          <a class="btn ghost" href="mailto:">联系（邮箱）</a>
+        </div>
+        <div style="margin-top:12px" class="links">
+          <!-- 只展示了 GitHub 链接；如需添加其它链接，可编辑此处 -->
+          <a href="https://github.com/soulkiller037" target="_blank" rel="noopener">github.com/soulkiller037</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 详情区：技能与项目 -->
+    <section class="details" aria-label="技能与项目">
+      <div class="panel">
+        <h3 style="margin-top:0">关于我</h3>
+        <p style="color:var(--muted);line-height:1.6">你好，我是 <strong>soulkiller_037</strong>，一个新人，正在学习并实践软件开发。欢迎通过我的 GitHub 查看我的项目。</p>
+
+        <h4 style="margin-bottom:8px">技能</h4>
+        <div class="skills" aria-hidden="false">
+          <span class="tag">Go</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+
+        <h4 style="margin-top:16px;margin-bottom:8px">项目（示例）</h4>
+        <ul style="margin-top:0;color:var(--muted);line-height:1.6">
+          <li>项目 A — 基础练习仓库</li>
+          <li>项目 B — 学习笔记与小工具</li>
+        </ul>
+      </div>
+
+      <aside class="panel" aria-label="侧边信息">
+        <h4 style="margin-top:0">联系</h4>
+        <p style="color:var(--muted)">通过 GitHub profile 发送 Issues 或 Messages。</p>
+
+        <h4 style="margin-top:14px">其它</h4>
+        <p style="color:var(--muted);font-size:0.95rem">主题：浅蓝 / 白。若需更改颜色或添加简历下载，请在仓库中编辑此文件。</p>
+      </aside>
+    </section>
+
+    <footer>
+      © 2025 soulkiller_037 — 由 GitHub Pages 托管
+    </footer>
+  </div>
+
+  <!-- 可选：简单脚本，用于未来扩展（当前无交互需求） -->
+  <script>
+    // 页面无复杂 JS，保留占位供日后扩展
+    (function(){ /* 空闭包，避免污染全局 */ })();
+  </script>
+</body>
+</html>
